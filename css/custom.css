@@ -148,7 +148,7 @@ nav ul li a:hover {
 /* --- START BANNER --- */
 .banner {
   background: url('../images/bannerbg.jpg') no-repeat;
-  background-size: 100vw 400px;
+  background-size: cover;
   padding: 3.5rem;
   text-align: center;
   color: #fff;
@@ -271,7 +271,7 @@ nav ul li a:hover {
   margin: auto;
   width: 80%;
   max-width: 950px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   font-size: 0.7rem;
 }
 .form-group {
@@ -298,6 +298,70 @@ nav ul li a:hover {
 }
 /* --- END CONTACT --- */
 
+/* --- START FOOTER --- */
+#footer {
+  background: url('../images/bannerbg.jpg') no-repeat;
+  background-size: cover;
+}
+.footer-info {
+  color: #fff;
+  display: grid;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 2rem;
+  padding-top: 4.5rem;
+}
+.main-footer-group {
+  grid-column: 1;
+  min-width: 140px;
+  padding-bottom: 3rem;
+  justify-self: center;
+}
+.logo {
+  margin-bottom: 2rem;
+}
+.footer-group {
+  grid-row: 2;
+  min-width: 140px;
+  justify-self: center;
+}
+.footer-group-second-row {
+  grid-row: 3;
+}
+.footer-group-text {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.footer-group-title {
+  margin-bottom: 1.5rem;
+}
+
+.footer-foot {
+  font-size: 0.85rem;
+  box-sizing: unset;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 425px;
+  border-radius: 5px 5px 0 0;
+}
+.footer-foot-terms,
+.footer-foot-copy {
+  display: flex;
+}
+.footer-foot-terms p {
+  margin: 0;
+  margin-right: 1.5em;
+}
+.footer-foot-copy p {
+  margin: 0;
+}
+/* --- END FOOTER --- */
+
 /* --- BREAK POINTS --- */
 @media (min-width: 650px) {
   #features-section {
@@ -311,6 +375,19 @@ nav ul li a:hover {
   }
   .contact-btn {
     justify-self: start;
+  }
+}
+@media (min-width: 790px) {
+  .footer-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer-foot {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 720px;
+  }
+  .footer-group-second-row {
+    grid-row: 2;
   }
 }
 @media (min-width: 992px) {
@@ -352,6 +429,14 @@ nav ul li a:hover {
     justify-self: center;
     grid-column-start: 2;
   }
+  .footer-info {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .main-footer-group,
+  .footer-group,
+  .footer-group-second-row {
+    grid-row: 1;
+  }
 }
 @media (min-width: 1200px) {
   .demo-section {
@@ -380,5 +465,8 @@ nav ul li a:hover {
     margin-bottom: 0;
     font-size: 2rem;
     margin: 0 2rem 0 3rem;
+  }
+  .footer-foot {
+    max-width: 1100px;
   }
 }
