@@ -81,6 +81,54 @@ nav ul li a:hover {
 /* --- END NAV --- */
 
 /* --- START DEMO --- */
+#demo {
+  background-image: url('../images/mobilevideobg.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 4.5rem 0 10vw 0;
+}
+.demo-area {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.demo-video-container {
+  position: relative;
+  margin-top: 2rem;
+  padding: 3%;
+  box-shadow: var(--shadow);
+  border-radius: 15px;
+}
+.demo-video {
+  width: 70vw;
+  border-radius: 15px;
+}
+.demo-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1%;
+  border: dotted var(--sec-color);
+  border-radius: 50%;
+}
+.demo-play i {
+  color: #fff;
+  background-color: var(--sec-color);
+  border-radius: 50%;
+  padding: 1.5em;
+}
+.demo-play i:hover {
+  cursor: pointer;
+}
+.demo-text-container {
+  padding: 0 4rem;
+  text-align: center;
+  color: var(--grey-color-2);
+  max-width: 550px;
+}
 /* --- END DEMO --- */
 
 /* --- START INFO --- */
@@ -378,6 +426,9 @@ nav ul li a:hover {
   }
 }
 @media (min-width: 790px) {
+  .demo-play i {
+    padding: 2.5rem;
+  }
   .footer-info {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -439,8 +490,25 @@ nav ul li a:hover {
   }
 }
 @media (min-width: 1200px) {
-  .demo-section {
-    background-size: auto 700px;
+  #demo {
+    background-image: url('../images/video_section_area_bg.jpg');
+    background-size: auto 100%;
+    background-position: left;
+    padding: 6vw 0;
+  }
+  .demo-area {
+    flex-direction: row;
+  }
+  .demo-video-container {
+    padding: 1.5%;
+    margin: 0;
+  }
+  .demo-video {
+    width: 33vw;
+  }
+  .demo-text-container {
+    text-align: left;
+    padding-left: 8vw;
   }
   .data-and-users {
     flex-direction: column;
