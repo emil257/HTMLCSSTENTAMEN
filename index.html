@@ -8,18 +8,12 @@
       src="https://kit.fontawesome.com/a2b8d875df.js"
       crossorigin="anonymous"
     ></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="./css/custom.css" />
 
     <title>Document</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav>
         <a href="#">LOGO</a>
         <ul>
@@ -29,22 +23,28 @@
           <li><a href="#hem">PRISER</a></li>
           <li><a href="#hem">KONTAKT</a></li>
         </ul>
-        <button>REGISTRERA</button>
+        <button id="reg-btn">REGISTRERA</button>
+        <button id="dropdown"><i class="fas fa-bars"></i></button>
+        <span><img src="./images/btn-blob-bg.svg" alt=""/></span>
       </nav>
       <div class="jumbo-area">
         <div class="jumbo-img-container">
           <img src="./images/mobile_screen.png" alt="" />
         </div>
         <div class="jumbo-text-container">
-          <h1 class="section-info-title">
+          <h1 class="jumbo-text-title">
             Lorem ipsum dolor, sit amet consectetur adipisicing.
           </h1>
           <p class="section-info-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
             similique ducimus quod nemo consequuntur exercitationem.
           </p>
-          <div class="apps">
-            <img src="./images/app1.png" alt="" />
+          <div class="apps jumbo-text-container-apps">
+            <img
+              class="jumbo-text-container-app-1"
+              src="./images/app1.png"
+              alt=""
+            />
             <img src="./images/app2.png" alt="" />
           </div>
         </div>
