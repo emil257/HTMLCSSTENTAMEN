@@ -20,7 +20,9 @@
   margin: 0;
   padding: 0;
 }
-body {
+body,
+html,
+textarea {
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
@@ -33,9 +35,6 @@ button {
   font-family: 'Poppins', sans-serif;
   outline: none;
   border: none;
-}
-textarea {
-  font-family: 'Poppins', sans-serif;
 }
 button:hover {
   cursor: pointer;
@@ -63,6 +62,11 @@ button:hover {
   background-position: center;
   background-repeat: no-repeat;
 }
+.logo-style {
+  background-color: red;
+  padding: 1rem 1.5rem;
+  color: #fff;
+}
 
 /* --- START NAV --- */
 nav {
@@ -71,6 +75,9 @@ nav {
   align-items: center;
   padding: 0 10vw;
   height: 75px;
+  max-width: 1200px;
+  box-sizing: initial;
+  margin: auto;
 }
 #reg-btn {
   background-color: #fff;
@@ -140,7 +147,7 @@ nav ul li a:hover {
 .jumbo-text-container {
   text-align: center;
   max-width: 550px;
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 .jumbo-text-title {
   font-size: 2rem;
@@ -182,6 +189,7 @@ nav ul li a:hover {
 .demo-video {
   width: 70vw;
   border-radius: 15px;
+  max-width: 600px;
 }
 .demo-play {
   position: absolute;
@@ -275,7 +283,7 @@ nav ul li a:hover {
 .banner {
   background: url('../images/bannerbg.jpg') no-repeat;
   background-size: cover;
-  padding: 3.5rem;
+  padding: 2rem;
   text-align: center;
   color: #fff;
 }
@@ -293,7 +301,7 @@ nav ul li a:hover {
   margin-bottom: 1.8rem;
 }
 .banner .apps img {
-  padding: 0 0.7rem;
+  padding: 0 0.5rem;
   height: 28px;
 }
 /* --- END BANNER --- */
@@ -301,8 +309,8 @@ nav ul li a:hover {
 /* --- START REVIEW --- */
 .data-and-users {
   background: url('../images/bannerbg.jpg') no-repeat;
-  background-size: 100vw 400px;
   background-position-y: bottom;
+  background-position-x: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -324,7 +332,7 @@ nav ul li a:hover {
   position: relative;
   border-bottom: 3px solid var(--grey-color-1);
   padding: 0 2rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
   padding-left: 50px;
   font-size: 0.8rem;
   color: var(--dark-1);
@@ -375,7 +383,7 @@ nav ul li a:hover {
   padding: 0.75em;
   border: 3px solid var(--grey-color-1);
   border-radius: 5px;
-  margin: 0 2rem 0 3rem;
+  margin: 0 2rem;
 }
 .data-ammount {
   text-align: left;
@@ -397,7 +405,7 @@ nav ul li a:hover {
   margin: auto;
   width: 80%;
   max-width: 950px;
-  margin-bottom: 100px;
+  padding-bottom: 4.5rem;
   font-size: 0.7rem;
 }
 .form-group {
@@ -468,20 +476,23 @@ nav ul li a:hover {
   font-size: 0.85rem;
   box-sizing: unset;
   background-color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   margin: auto;
   max-width: 425px;
   border-radius: 5px 5px 0 0;
 }
-.footer-foot-terms,
-.footer-foot-copy {
+.footer-foot-terms {
   display: flex;
+  flex-direction: column;
 }
 .footer-foot-terms p {
   margin: 0;
-  margin-right: 1.5em;
+  margin-right: 1em;
+}
+.footer-foot-terms p:nth-child(2) {
+  margin: 0.2rem 0;
 }
 .footer-foot-copy p {
   margin: 0;
@@ -489,6 +500,17 @@ nav ul li a:hover {
 /* --- END FOOTER --- */
 
 /* --- BREAK POINTS --- */
+@media (min-width: 460px) {
+  .footer-foot {
+    padding: 1rem 2rem;
+  }
+  .footer-foot-terms {
+    flex-direction: row;
+  }
+  .footer-foot-terms p:nth-child(2) {
+    margin: 0;
+  }
+}
 @media (min-width: 650px) {
   #features-section {
     height: 680px;
@@ -536,9 +558,9 @@ nav ul li a:hover {
     text-align: center;
   }
   .data-icon {
+    margin: 0;
     margin-bottom: 2.3rem;
     font-size: 2.3rem;
-    margin: 0 0 2rem 0;
   }
   .footer-info {
     grid-template-columns: repeat(4, 1fr);
@@ -582,7 +604,7 @@ nav ul li a:hover {
 }
 @media (min-width: 1200px) {
   nav ul {
-    margin-right: 15vw;
+    margin-right: 250px;
   }
   nav ul li {
     margin: 0 1.5rem;
@@ -602,8 +624,8 @@ nav ul li a:hover {
     margin: auto;
   }
   .jumbo-img-container {
-    max-width: 340px;
-    margin-right: 20vw;
+    max-width: 300px;
+    margin-right: 12vw;
     margin-left: 5vw;
   }
   .jumbo-img-container img {
@@ -620,7 +642,7 @@ nav ul li a:hover {
     background-image: url('../images/video_section_area_bg.jpg');
     background-size: auto 100%;
     background-position: left;
-    padding: 6vw 0;
+    padding: 4rem 0;
   }
   .demo-area {
     flex-direction: row;
@@ -635,10 +657,12 @@ nav ul li a:hover {
   .demo-text-container {
     text-align: left;
     padding-left: 8vw;
+    padding-right: 0;
   }
   .data-and-users {
     flex-direction: column;
     align-items: center;
+    background-size: 100% 65%;
   }
   .reviews {
     grid-template-columns: repeat(3, 350px);
@@ -658,9 +682,24 @@ nav ul li a:hover {
   .data-icon {
     margin-bottom: 0;
     font-size: 2rem;
-    margin: 0 2rem 0 3rem;
+    margin: 0 2rem 0 4rem;
   }
   .footer-foot {
     max-width: 1100px;
+  }
+}
+@media (min-width: 2000px) {
+  .jumbo-img-container {
+    margin-right: 0;
+  }
+  #demo {
+    background-image: none;
+  }
+  .demo-text-container {
+    text-align: left;
+    padding-left: 4rem;
+  }
+  .demo-video-container {
+    padding: 2rem;
   }
 }
