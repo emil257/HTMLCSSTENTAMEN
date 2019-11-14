@@ -1,5 +1,5 @@
 /* CSS Google Font  */
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700");
 /* CSS Google Font end  */
 :root {
   --prim-color: #9e3fe0;
@@ -26,13 +26,13 @@ textarea {
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 a {
   text-decoration: none;
 }
 button {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   outline: none;
   border: none;
 }
@@ -87,15 +87,7 @@ nav {
   font-weight: 700;
   font-size: 0.85rem;
   border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
-  display: none;
-}
-#dropdown {
-  display: block;
-  color: #fff;
-  background-color: transparent;
-  font-size: 2rem;
-  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 #dropdown:hover {
   cursor: pointer;
@@ -105,15 +97,15 @@ nav span {
   right: 0;
   top: 0;
   z-index: -1;
-  max-width: 300px;
 }
 nav span img {
-  max-width: 270px;
+  width: 46vw;
+  max-width: 430px;
 }
 nav ul {
   list-style-type: none;
   margin: 0;
-  display: none;
+  display: flex;
 }
 nav ul li {
   margin: 0 0.7rem;
@@ -129,6 +121,115 @@ nav ul li a:hover {
   color: var(--prim-color);
 }
 /* --- END NAV --- */
+
+/* --- START TOGGLE NAV */
+#nav {
+  display: none;
+}
+#mobile-logo {
+  position: absolute;
+  z-index: -1;
+  left: 10vw;
+  top: 0.9rem;
+}
+#nav-toggle {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+}
+#slidein-list {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style-type: none;
+}
+#dropdown-toggle {
+  position: absolute;
+  right: 10vw;
+  top: 1.5rem;
+  display: block;
+  color: #fff;
+  background-color: transparent;
+  font-size: 2rem;
+  padding: 0;
+}
+#dropdown-toggle:hover {
+  cursor: pointer;
+}
+#drop-down-toggle-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+#drop-down-toggle-bg img {
+  overflow: hidden;
+}
+#slidein-list li {
+  padding: 0.6rem;
+}
+#slidein-list li a {
+  text-decoration: none;
+  color: #fff;
+}
+.toggle_show {
+  animation-name: slidein;
+  animation-duration: 500ms;
+  height: 130vh;
+}
+.toggle_hidden {
+  animation-name: slideout;
+  animation-duration: 500ms;
+  height: 135px;
+}
+.toggle_show_list {
+  animation-name: slidein_list;
+  animation-duration: 500ms;
+  left: 1rem;
+}
+.toggle_hide_list {
+  animation-name: slideout_list;
+  animation-duration: 500ms;
+  left: -300px;
+}
+@keyframes slidein {
+  from {
+    height: 135px;
+  }
+
+  to {
+    height: 130vh;
+  }
+}
+@keyframes slideout {
+  from {
+    height: 130vh;
+  }
+
+  to {
+    height: 135px;
+  }
+}
+@keyframes slidein_list {
+  from {
+    left: -300px;
+  }
+
+  to {
+    left: 1rem;
+  }
+}
+@keyframes slideout_list {
+  from {
+    left: 1rem;
+  }
+
+  to {
+    left: -300px;
+  }
+}
 
 /* --- START JUMBO --- */
 .jumbo-area {
@@ -168,7 +269,7 @@ nav ul li a:hover {
 
 /* --- START DEMO --- */
 #demo {
-  background-image: url('../images/mobilevideobg.png');
+  background-image: url("../images/mobilevideobg.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -222,7 +323,7 @@ nav ul li a:hover {
 .info {
   position: relative;
   z-index: -1;
-  background: url('../images/custom\ –\ 1.png') no-repeat;
+  background: url("../images/custom\ –\ 1.png") no-repeat;
   margin-top: -75px;
   height: 800px;
   background-size: 100vw auto;
@@ -282,7 +383,7 @@ nav ul li a:hover {
 
 /* --- START BANNER --- */
 .banner {
-  background: url('../images/bannerbg.jpg') no-repeat;
+  background: url("../images/bannerbg.jpg") no-repeat;
   background-size: cover;
   padding: 2rem;
   text-align: center;
@@ -309,7 +410,7 @@ nav ul li a:hover {
 
 /* --- START REVIEW --- */
 .data-and-users {
-  background: url('../images/bannerbg.jpg') no-repeat;
+  background: url("../images/bannerbg.jpg") no-repeat;
   background-position-y: bottom;
   background-position-x: center;
   display: flex;
@@ -435,7 +536,7 @@ nav ul li a:hover {
 
 /* --- START FOOTER --- */
 #footer {
-  background: url('../images/bannerbg.jpg') no-repeat;
+  background: url("../images/bannerbg.jpg") no-repeat;
   background-size: cover;
 }
 .footer-info {
@@ -524,20 +625,10 @@ nav ul li a:hover {
   }
 }
 @media (min-width: 790px) {
-  nav ul {
+  #nav {
     display: flex;
   }
-  nav span {
-    max-width: none;
-  }
-  nav span img {
-    width: 46vw;
-    max-width: 430px;
-  }
-  #reg-btn {
-    display: block;
-  }
-  #dropdown {
+  #nav-toggle {
     display: none;
   }
   .demo-play i {
@@ -614,7 +705,7 @@ nav ul li a:hover {
     display: none;
   }
   #header {
-    background-image: url('../images/header_bg.png');
+    background-image: url("../images/header_bg.png");
     background-size: cover;
   }
   .jumbo-area {
@@ -640,7 +731,7 @@ nav ul li a:hover {
     line-height: 1.5;
   }
   #demo {
-    background-image: url('../images/video_section_area_bg.jpg');
+    background-image: url("../images/video_section_area_bg.jpg");
     background-size: auto 100%;
     background-position: left;
     padding: 4rem 0;

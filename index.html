@@ -8,13 +8,14 @@
       src="https://kit.fontawesome.com/a2b8d875df.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="./css/custom.css" />
 
     <title>Document</title>
   </head>
   <body>
     <header id="header">
-      <nav>
+      <nav id="nav">
         <a class="logo-style" href="#">LOGO</a>
         <ul>
           <li><a href="#hem">HEM</a></li>
@@ -24,9 +25,24 @@
           <li><a href="#hem">KONTAKT</a></li>
         </ul>
         <button id="reg-btn">REGISTRERA</button>
-        <button id="dropdown"><i class="fas fa-bars"></i></button>
         <span><img src="./images/btn-blob-bg.svg" alt=""/></span>
       </nav>
+      <!-- MOBILE NAV START -->
+      <div id="nav-toggle">
+        <a id="mobile-logo" class="logo-style" href="#">LOGO</a>
+        <button id="dropdown-toggle"><i class="fas fa-bars"></i></button>
+        <span id="drop-down-toggle-bg">
+          <img id="navbar" src="./images/btn-blob-bg.svg" alt="" />
+        </span>
+        <ul id="slidein-list" class="toggle_hide_list">
+          <li><a href="#hem">HEM</a></li>
+          <li><a href="#hem">OM OSS</a></li>
+          <li><a href="#hem">TJÄNSTER</a></li>
+          <li><a href="#hem">PRISER</a></li>
+          <li><a href="#hem">KONTAKT</a></li>
+        </ul>
+      </div>
+      <!-- MOBILE NAV END -->
       <div class="jumbo-area">
         <div class="jumbo-img-container">
           <img src="./images/mobile_screen.png" alt="" />
@@ -334,5 +350,45 @@
         </div>
       </div>
     </footer>
+    <script>
+      var toggle = false;
+      $("#dropdown-toggle").click(function() {
+        if (toggle) {
+          $("#navbar")
+            .last()
+            .removeClass("toggle_show");
+          $("#navbar")
+            .last()
+            .addClass("toggle_hidden");
+          $("#slidein-list")
+            .last()
+            .removeClass("toggle_show_list");
+          $("#slidein-list")
+            .last()
+            .addClass("toggle_hide_list");
+          toggle = !toggle;
+        } else {
+          $("#navbar")
+            .last()
+            .removeClass("toggle_hidden");
+          $("#navbar")
+            .last()
+            .addClass("toggle_show");
+          $("#slidein-list")
+            .last()
+            .addClass("toggle_show_list");
+          $("#slidein-list")
+            .last()
+            .removeClass("toggle_hide_list");
+
+          toggle = !toggle;
+        }
+      });
+      $(window).resize(function() {
+        $("#navbar")
+          .last()
+          .removeClass("toggle_hidden");
+      });
+    </script>
   </body>
 </html>
